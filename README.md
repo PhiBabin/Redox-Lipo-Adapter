@@ -1,6 +1,5 @@
 
 <img src="pictures/cover.png" width="700" alt="Original Redox next to the Redox with QUASO">
---
 
 # QUASO: A Rechargeable LiPo Adapter for Redox
 

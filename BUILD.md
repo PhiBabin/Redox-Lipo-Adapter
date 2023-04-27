@@ -20,11 +20,12 @@
 |  2 | U2 | LDO 3V regulator TPS7A0330   | [Digikey](https://www.digikey.com/en/products/detail/texas-instruments/TPS7A0330PDBVR/12165132) | [LCSC](https://www.lcsc.com/product-detail/Linear-Voltage-Regulators-LDO_Texas-Instruments-TPS7A0330PDBVR_C3752328.html) |
 
 *I haven't tried ordering the LCSC parts, they should work.
+
 **Please note, that version 1.0 of the board uses [USB4515](https://www.digikey.com/en/products/detail/gct/usb4515-gf-a/15635471), while version 1.2 uses [YTC-TC6-34](https://www.lcsc.com/product-detail/USB-Connectors_YIYUAN-YTC-TC6-34_C2927284.html) as the USB-C connector. From checking the datasheet, it seems that USB4515 would fit on version 1.2 of the board, but I haven't tested it. 
 
 ### Battery Selection
 
-Any 3.7 LiPo cell battery should work with QUASO. Nano!Nice suggests using a 301230 battery (~100mAh) for a low power keyboard like the wireless Redox. For reference, a CR2032 coin battery as a capacity of around 225mAh. I used a [503035 500mAh battery](https://www.digikey.com/en/products/detail/adafruit-industries-llc/1578/5054539?s=N4IgTCBcDaIIwFYwA4C0dkBY6oHIBEACEAXQF8g) for my build. You can [find here](3d_printed_case/), a 3D printed case that fits the dimensions of the 503035. If you use a different battery, you'll need a different case.
+Any 3.7V LiPo single cell battery should work with QUASO. Nano!Nice suggests using a 301230 battery (~100mAh) for a low power keyboard like the wireless Redox. For reference, a CR2032 coin battery as a capacity of around 225mAh. I used a [503035 500mAh battery](https://www.digikey.com/en/products/detail/adafruit-industries-llc/1578/5054539?s=N4IgTCBcDaIIwFYwA4C0dkBY6oHIBEACEAXQF8g) for my build. You can [find here](3d_printed_case/), a 3D printed case that fits the dimensions of the 503035. If you use a different battery, you'll need a different case.
 
 ## Instructions
 The PCB is easy to solder by hand, except for the battery management chip (BQ24075). Because of the BQ24075, I **strongly recommend** you use a PCB assembly service to solder this PCB or use a stencil + solder paste. Beware that I have **NOT tested** the gerber files / BOM / CPT for assembly!
@@ -46,7 +47,10 @@ Make sure that diode D1 is oriented correctly, by looking at the pad under the d
 ![Orientation of D1](pictures/d1_orientation.png)
 
 #### Testing
-You can test that the USB port and 3V regulator is working correctly without the battery. You need to plug the USB-C port and check the voltages: you should see 5V between test point TP1 and the ground; and see 3V between the holes on either side of the board and the ground. 
+You can test that the USB port and 3V regulator is working correctly without the battery.
+ - Plug the USB-C port and check the voltages you should see: 
+   - 5V between test point TP1 and the ground
+   - 3V between the holes on either side of the board and the ground. 
 
 
 ### Connecting the Battery
@@ -56,17 +60,20 @@ You can test that the USB port and 3V regulator is working correctly without the
 If you're building the right hand Redox, make the battery wire go towards the right. If you're building the left hand Redox, do the opposite.
 
 #### Testing
-Check that when the USB is plugged in, the LED lights up. Check that when the USB is not plugged in, the battery is providing power: the voltage between BAT+ and ground should be the same as between test point TP1 and the ground; and you should also see 3V between the holes on either side of the board and the ground.
-
-Check that battery charging works: have the battery discharged to a voltage of less than 4.1V. Plug in the USB and check after half an hour if the voltage has increased.
+ - Check that when the USB is plugged in, the LED lights up.
+ - Check that when the USB is not plugged in, the battery is providing power:
+   - the voltage between BAT+ and ground should be the same as between test point TP1 and the ground;
+   - And you should also see 3V between the holes on either side of the board and the ground;
+ - Check that battery charging works: have the battery discharged to a voltage of less than 4.1V. Plug in the USB and check after half an hour if the voltage has increased.
 
 ### Soldering QUASO to Redox
 1. Unsolder the coin cell holder from the Redox keyboard. Make sure to not use too much force when removing the holder.
 2. Remove excess solder using a soldering wick.
 3. Align the three holes on the QUASO to the pad on the Redox. Version 1.0 of the Quaso PCB doesn't sit flush with the border of the Redox PCB.
 <img src="pictures/unsoldered_pcb.png" alt="Unsoldered QUASO PCB on top of a unsoldered redox PCB" width="700">
-1. Once you're satisfied with the alignment, solder it to the PCB starting with the two 3V output holes. They don't have a ground plane, so they're much easier to solder first.
-2. Solder the center ground hole.
+
+4. Once you're satisfied with the alignment, solder it to the PCB starting with the two 3V output holes. They don't have a ground plane, so they're much easier to solder first.
+5. Solder the center ground hole.
 
 #### Testing
  - Test that you're getting 3V on the pin of the power switch.
@@ -81,6 +88,7 @@ This assumes you're using the 3D printed case:
 1. Put double sided tape on the battery.
 2. Insert the battery in its receptacle in the bottom case.
 <img src="pictures/case_with_battery.png" alt="Open case with the battery" width="700">
+
 3. Pass the battery's wires in their trench.
 4. Close the bottom case while making sure that the wires are not pinched by the case.
 5. Screw the bottom case.

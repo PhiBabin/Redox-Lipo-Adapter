@@ -35,11 +35,13 @@ Because the PCB replaces the coin cell battery holder, the keyboard's on/off swi
 ## Change Log
 
 - V1.0: Initial version [tested]
-- V1.2: [Not tested]
+- V1.2: [tested by jadewolf05]
    - Change regulated voltage from 3.3V to 3V, the regulator will only cut off when the battery voltage reach 3.2V, instead of 3.5V.  
    - Change the USB connector for a part available on LCSL.
    - Swap of components to make JLCPCB assembly using  less extended components.
    - Make the top of the PCB flush with the keyboard's PCB.
+- V1.3: [NOT TESTED]
+  - Fix R1, R2, R4 and R5 not connected to GND.
 <img src="pictures/v1_vs_v1.2.png" alt="Unsoldered QUASO PCB on top of a unsoldered redox PCB" width="500">
 
 

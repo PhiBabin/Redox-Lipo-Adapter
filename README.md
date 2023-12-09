@@ -23,6 +23,9 @@ The USB-C connector is only used to charge the battery, it doesn't transmit data
 
 Because the PCB replaces the coin cell battery holder, the keyboard's on/off switch doesn't disconnect the LiPo battery from the battery management circuit. This means that when the switch is turned OFF, the battery will still consume a tiny bit of power, because it's powering the battery management chip and the voltage regulator. It also means that the battery can be recharged while the keyboard is turned off.
 
+## Battery Life
+
+For my redox, I choosed a [503035 500mAh battery](https://www.digikey.com/en/products/detail/adafruit-industries-llc/1578/5054539?s=N4IgTCBcDaIIwFYwA4C0dkBY6oHIBEACEAXQF8g). It took 6 months before I had to recharge the battery. Any 3.7V LiPo single cell battery should work with QUASO. Nano!Nice suggests using a 301230 battery (~100mAh) for a low power keyboard like the wireless Redox. For reference, a CR2032 coin battery as a capacity of around 225mAh.
 
 ## Pictures
 

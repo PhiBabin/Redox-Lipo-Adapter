@@ -25,7 +25,7 @@ Because the PCB replaces the coin cell battery holder, the keyboard's on/off swi
 
 ## Battery Life
 
-For my redox, I choosed a [503035 500mAh battery](https://www.digikey.com/en/products/detail/adafruit-industries-llc/1578/5054539?s=N4IgTCBcDaIIwFYwA4C0dkBY6oHIBEACEAXQF8g). It took 6 months before I had to recharge the battery. Any 3.7V LiPo single cell battery should work with QUASO. Nano!Nice suggests using a 301230 battery (~100mAh) for a low power keyboard like the wireless Redox. For reference, a CR2032 coin battery as a capacity of around 225mAh.
+For my redox, I choosed a [503035 500mAh battery](https://www.digikey.com/en/products/detail/adafruit-industries-llc/1578/5054539?s=N4IgTCBcDaIIwFYwA4C0dkBY6oHIBEACEAXQF8g). It took 6 months before I had to recharge the battery. Any 3.7V LiPo single cell battery should work with QUASO, but __IT MUST HAVE AN UNDERVOLTAGE PROTECTION__! Most small batteries have this kind of protection. Nano!Nice suggests using a 301230 battery (~100mAh) for a low power keyboard like the wireless Redox. For reference, a CR2032 coin battery as a capacity of around 225mAh.
 
 ## Pictures
 
